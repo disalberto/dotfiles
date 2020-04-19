@@ -40,6 +40,12 @@ alias systar="sudo systemctl start"
 alias sysdis="sudo systemctl disable"
 alias systop="sudo systemctl stop"
 
+#GIT
+alias gaa="git add ."
+alias gs="git status"
+alias gc="git commit -m"
+alias gpm="git push origin master"
+
 alias ll="ls -lath"
 alias aur="makepkg -si"
 

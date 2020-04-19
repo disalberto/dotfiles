@@ -2,5 +2,6 @@
 
 echo "Restoring .bashrc"
 mv ~/.bashrc ~/.bashrc.bak
-ln -sv ~/dotfiles/.bashrc ~/.bashrc
-`source ~/.bashrc`
+ln -s ~/.dotfiles/home/.bashrc ~/.bashrc
+source ~/.bashrc
+
