@@ -12,4 +12,4 @@ backup_and_save() {
 
 
 echo "#1: Spotify"
-backup_and_save ./spotify/alberto88a-user.prefs /home/disalberto/.config/spotify/Users/alberto88a-user/prefs
+backup_and_save $HOME/.dotfiles/config/spotify/alberto88a-user.prefs $HOME/.config/spotify/Users/alberto88a-user/prefs

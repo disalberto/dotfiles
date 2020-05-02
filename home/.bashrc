@@ -9,14 +9,6 @@
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
-#EXPORTS
-export QT_AUTO_SCREEN_SCALE_FACTOR=0 #boolean
-export QT_SCALE_FACTOR=2.00
-export QT_SCREEN_SCALE_FACTORS=2.00
-#export QT_ENABLE_HIGHDPI_SCALING=1
-export GDK_SCALE=2
-export ELM_SCALE=2
-
 alias spacman="sudo pacman -Sy"
 alias rpacman="sudo pacman -R"
 alias upacman="sudo pacman -Syu"
