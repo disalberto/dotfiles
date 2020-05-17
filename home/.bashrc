@@ -9,17 +9,18 @@
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
+#PACMAN & YAOURT
+alias aur="makepkg -si"
 alias spacman="sudo pacman -Sy"
 alias rpacman="sudo pacman -R"
 alias upacman="sudo pacman -Syu"
 alias ppacman="sudo pacman -R $(pacman -Qdtq)"
+alias pcache="sudo paccache -r"
 
 alias yays="yay -S"
 alias yayu="yay -Suy"
 alias yayp="yay -Yc"
 alias yayr="yay -Rns"
-
-alias svim="sudo vim"
 
 #GRUB
 alias grubmkc="sudo grub-mkconfig -o /boot/grub/grub.cfg"
@@ -36,12 +37,16 @@ alias systop="sudo systemctl stop"
 #GIT
 alias gaa="git add ."
 alias gs="git status"
+alias gd="git diff"
 alias gc="git commit -m"
 alias gpm="git push origin master"
 
-alias ll="ls -lath"
-alias aur="makepkg -si"
-
-alias mirru="sudo reflector --verbose -l 200 -n 20 -p http --sort rate --save /etc/pacman.d/mirrorlist"
+#XAMPP
 alias xamppstart="sudo /opt/lampp/lampp start"
 alias xamppstop="sudo /opt/lampp/lampp stop"
+
+#ORPHANS
+alias svim="sudo vim"
+alias ll="ls -lath"
+alias mirru="sudo reflector --verbose -l 200 -n 20 -p http --sort rate --save /etc/pacman.d/mirrorlist"
+alias treee="tree -I '.git' -a $1"
