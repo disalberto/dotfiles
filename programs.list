@@ -2,7 +2,7 @@ tree
 xmlstarlet
 pam
 pacman-contrib
-evdi
-displaylink
+#evdi
+#displaylink
 arandr
 xfce4-panel-profiles

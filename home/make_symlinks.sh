@@ -20,6 +20,5 @@ source ~/.bashrc
 echo "Restoring .pam_environment"
 make_symlink ~/.dotfiles/home/.pam_environment ~/.pam_environment
 
-echo "Restoring .screenlayout profile for 3 screens"
-make_symlink ~/.dotfiles/home/.screenlayout/displaylink_2_externals.sh ~/.screenlayout/displaylink_2_externals.sh
-make_symlink ~/.dotfiles/home/.screenlayout/displaylink_hdmi_laptop.sh ~/.screenlayout/displaylink_hdmi_laptop.sh
+echo "Restoring .xprofile"
+make_symlink ~/.dotfiles/home/.xprofile ~/.xprofile
