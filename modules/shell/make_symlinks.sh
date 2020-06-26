@@ -26,7 +26,3 @@ make_symlink ~/.dotfiles/modules/shell/.pam_environment ~/.pam_environment
 
 echo "Restoring .xprofile"
 make_symlink ~/.dotfiles/modules/shell/.xprofile ~/.xprofile
-
-echo "Restoring .xinitrc"
-make_symlink ~/.dotfiles/modules/shell/.xinitrc ~/.xinitrc
-

@@ -6,6 +6,9 @@
 [[ $- != *i* ]] && return
 [[ -z "$TMUX" ]] && exec tmux
 
+# Temporary workaround
+[ -f ~/.xprofile ] && . ~/.xprofile
+
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
