@@ -20,7 +20,7 @@ backup_and_save() {
 
 
 echo "#1: Spotify"
-backup_and_save $HOME/.dotfiles/config/spotify/alberto88a-user.prefs $HOME/.config/spotify/Users/alberto88a-user/prefs
+backup_and_save $HOME/.dotfiles/modules/config/spotify/alberto88a-user.prefs $HOME/.config/spotify/Users/alberto88a-user/prefs
 
 #echo "#2: DisplayLink"
-#backup_and_save $HOME/.dotfiles/config/displaylink/20-evdidevice.conf /usr/share/X11/xorg.conf.d/20-evdidevice.conf y
+#backup_and_save $HOME/.dotfiles/modules/config/displaylink/20-evdidevice.conf /usr/share/X11/xorg.conf.d/20-evdidevice.conf y
