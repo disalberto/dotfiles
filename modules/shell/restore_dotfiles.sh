@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source ~/.dotfiles/modules/shell/missing_sw.sh
+
 #USAGE make_symlink sym_target sym_source
 
 make_backup() {
@@ -38,7 +40,8 @@ restore_xprofile() {
 
 restore_ubuntu() {
   echo "Restoring dotfiles for Ubuntu.."
-  restore_aliases
+  #restore_aliases
+  sublime
 }
 
 restore_arch() {

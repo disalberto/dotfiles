@@ -2,19 +2,7 @@
 # ~/.bashrc
 #
 
-source ./bashrc.backup
-
 ### Archlinux specific ###
-
-# If not running interactively, don't do anything
-#[[ $- != *i* ]] && return
-#[[ -z "$TMUX" ]] && exec tmux
-
-# Temporary workaround
-#[ -f ~/.xprofile ] && . ~/.xprofile
-
-#alias ls='ls --color=auto'
-#PS1='[\u@\h \W]\$ '
 
 #PACMAN & YAOURT
 alias aur="makepkg -si"
@@ -60,3 +48,7 @@ alias xamppstop="sudo /opt/lampp/lampp stop"
 alias svim="sudo vim"
 alias ll="ls -lath"
 alias treee="tree -I '.git' -a $1"
+
+alias wgetnocheck="wget --no-check-certificate -qO $1"
+
+alias bz2="tar jvxf $1"
