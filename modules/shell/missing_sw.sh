@@ -1,11 +1,13 @@
 #!/bin/bash
 
 #Sublime Text 3
-sublime() {
+install_sublime() {
   
-  sublime="/usr/local/bin/sublime_text_3/sublime_text"
+  BIN="/usr/local/bin"
+  SUBLIME="$BIN/sublime_text_3/sublime_text"
+  SUBLIME_LN="$BIN/sublime"
   
-  if [ -f $sublime ] 
+  if [ -f $SUBLIME ] 
   then
     echo "Sublime Text 3 already installed"
   else
@@ -13,5 +15,10 @@ sublime() {
     sudo ~/.dotfiles/modules/shell/install_sublime.sh
   fi
 
-  alias sublime="$sublime"
+  sudo ln -s $SUBLIME $SUBLIME_LN 
+
 }
+
+
+### To install ###
+install_sublime

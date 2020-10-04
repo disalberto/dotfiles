@@ -1,7 +1,5 @@
 #!/bin/bash
 
-source ~/.dotfiles/modules/shell/missing_sw.sh
-
 #USAGE make_symlink sym_target sym_source
 
 make_backup() {
@@ -25,29 +23,24 @@ restore_aliases() {
   source ~/.bashrc
 }
 
-restore_pam() {
- echo "Restoring .pam_environment"
- make_symlink ~/.dotfiles/modules/shell/.pam_environment ~/.pam_environment
+restore_dot() {
+  echo "Restoring $2"
+  make_symlink $1 $2
 }
-
-restore_xprofile() {
- echo "Restoring .xprofile"
- make_symlink ~/.dotfiles/modules/shell/.xprofile ~/.xprofile
-}
-
 
 ### System dependent actions ###
 
 restore_ubuntu() {
   echo "Restoring dotfiles for Ubuntu.."
   #restore_aliases
-  sublime
+  ~/.dotfiles/modules/shell/missing_sw.sh
+
 }
 
 restore_arch() {
   echo "Restoring dotfiles for Archlinux.."
   restore_aliases
-  restore_pam
-  restore_xprofile
+  restore_dot ~/.dotfiles/modules/shell/arch/.pam_environment ~/.pam_environment
+  restore_dot ~/.dotfiles/modules/shell/arch/.xprofile ~/.xprofile
 }
 
