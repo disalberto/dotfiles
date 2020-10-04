@@ -19,7 +19,7 @@ make_symlink() {
 
 restore_aliases() {
   echo "Restoring aliases"
-  echo -e "\nCustom aliases...\nsource ~/.dotfiles/modules/shell/aliases.sh" >> ~/.bashrc
+  echo -e "\nCustom aliases...\nsource ~/dotfiles/modules/shell/aliases.sh" >> ~/.bashrc
   source ~/.bashrc
 }
 
@@ -33,14 +33,14 @@ restore_dot() {
 restore_ubuntu() {
   echo "Restoring dotfiles for Ubuntu.."
   #restore_aliases
-  ~/.dotfiles/modules/shell/missing_sw.sh
+  ~/dotfiles/modules/shell/missing_sw.sh
 
 }
 
 restore_arch() {
   echo "Restoring dotfiles for Archlinux.."
   restore_aliases
-  restore_dot ~/.dotfiles/modules/shell/arch/.pam_environment ~/.pam_environment
-  restore_dot ~/.dotfiles/modules/shell/arch/.xprofile ~/.xprofile
+  restore_dot ~/dotfiles/modules/shell/arch/.pam_environment ~/.pam_environment
+  restore_dot ~/dotfiles/modules/shell/arch/.xprofile ~/.xprofile
 }
 

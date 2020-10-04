@@ -1,12 +1,12 @@
 #!/bin/bash
 
-localbin="/usr/local/bin"
-localbintmp="$localbin/tmp"
+BIN="/usr/local/bin"
+BIN_TMP="$BIN/tmp"
 
-mkdir -p $localbintmp
+mkdir -p $BIN_TMP
 
-wget --no-check-certificate -qO $localbintmp/sublime.tar.bz2 https://download.sublimetext.com/sublime_text_3_build_3211_x64.tar.bz2
+wget --no-check-certificate -qO $BIN_TMP/sublime.tar.bz2 https://download.sublimetext.com/sublime_text_3_build_3211_x64.tar.bz2
 
-tar jvxf $localbintmp/sublime.tar.bz2 -C $localbin
+tar jvxf $BIN_TMP/sublime.tar.bz2 -C $BIN
 
-rm -rf $localbintmp
+rm -rf $BIN_TMP

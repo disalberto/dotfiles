@@ -12,7 +12,7 @@ install_sublime() {
     echo "Sublime Text 3 already installed"
   else
     echo "Installing Sublime Text 3"
-    sudo ~/.dotfiles/modules/shell/install_sublime.sh
+    sudo ~/dotfiles/modules/shell/install_sublime.sh
   fi
 
   sudo ln -s $SUBLIME $SUBLIME_LN 
