@@ -35,9 +35,13 @@ alias mirru="sudo reflector --verbose -l 200 -n 20 -p http --sort rate --save /e
 
 #GIT
 alias gaa="git add ."
+alias gb="git branch"
+alias gbd="git branch -D $1"
+alias gcb="git checkout -b $1"
 alias gs="git status"
 alias gd="git diff"
-alias gc="git commit -m"
+alias gc="git commit -m $1"
+alias gp="git push origin $1"
 alias gpm="git push origin master"
 
 #XAMPP
