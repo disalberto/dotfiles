@@ -6,13 +6,16 @@ install_sublime() {
   BIN="/usr/local/bin"
   SUBLIME="$BIN/sublime_text_3/sublime_text"
   SUBLIME_LN="$BIN/sublime"
-  
+  CWD="$(dirname $0)"
+
+  mkdir -p $BIN
+
   if [ -f $SUBLIME ] 
   then
     echo "Sublime Text 3 already installed"
   else
     echo "Installing Sublime Text 3"
-    sudo ~/dotfiles/modules/shell/install_sublime.sh
+    sudo $CWD/install_sublime.sh
   fi
 
   sudo ln -s $SUBLIME $SUBLIME_LN 
@@ -21,4 +24,5 @@ install_sublime() {
 
 
 ### To install ###
-install_sublime
+#install_sublime
+
