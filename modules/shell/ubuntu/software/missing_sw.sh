@@ -6,7 +6,7 @@ install_sublime() {
   BIN="/usr/local/bin"
   SUBLIME="$BIN/sublime_text_3/sublime_text"
   SUBLIME_LN="$BIN/sublime"
-  CWD="$(dirname $0)"
+  CWD="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
   mkdir -p $BIN
 
@@ -24,5 +24,5 @@ install_sublime() {
 
 
 ### To install ###
-#install_sublime
+install_sublime
 
