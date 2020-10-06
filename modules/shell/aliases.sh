@@ -41,7 +41,9 @@ alias gcb="git checkout -b $1"
 alias gs="git status"
 alias gd="git diff"
 alias gc="git commit -m $1"
+alias gca="git commit --amend --no-edit"
 alias gp="git push origin $1"
+alias gpf="git push -f origin $1"
 alias gpm="git push origin master"
 
 #XAMPP
