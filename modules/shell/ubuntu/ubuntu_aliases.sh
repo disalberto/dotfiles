@@ -12,3 +12,7 @@ disable_animations() {
 enable_animations() {
   animations true
 }
+
+add_vb_group() {
+  sudo adduser $(whoami) vboxsf
+}
