@@ -16,3 +16,8 @@ enable_animations() {
 add_vb_group() {
   sudo adduser $(whoami) vboxsf
 }
+
+disable_wayland() {
+  sudo sed -i '/#WaylandEnable=false/s/^#//g' /etc/gdm3/custom.conf
+  sudo systemctl restart gdm3
+}
