@@ -21,3 +21,7 @@ disable_wayland() {
   sudo sed -i '/#WaylandEnable=false/s/^#//g' /etc/gdm3/custom.conf
   sudo systemctl restart gdm3
 }
+
+deb_install() {
+  sudo dpkg -i $1
+}
