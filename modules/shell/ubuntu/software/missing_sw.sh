@@ -51,6 +51,10 @@ install_deb() {
 
 }
 
+snap_install() {
+  sudo snap instal "$1" --classic
+}
+
 install_chrome() {
   install_deb "google-chrome-stable" "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
 }
@@ -60,8 +64,13 @@ install_qsql() {
   install_deb "visidata" "https://github.com/saulpw/deb-vd/raw/master/pool/main/v/visidata/visidata_1.5.2-1_all.deb"
 }
 
+install_intellij_ultimate(){
+ snap_install intellij-idea-ultimate
+}
+
 
 ### To install ###
 install_sublime
 install_chrome
 install_qsql
+#install_intellij_ultimate
