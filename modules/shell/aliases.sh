@@ -35,3 +35,7 @@ alias wgetnocheck="wget --no-check-certificate -qO $1"
 alias bz2="tar jvxf $1"
 
 alias choose_java_version="sudo update-alternatives --config java"
+
+alias partition_id="sudo blkid $1"
+
+alias groups_edit="sudo vigr"

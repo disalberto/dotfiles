@@ -1,5 +1,11 @@
 #!/bin/bash
 
+alias aptupd="sudo apt-get update"
+alias aptupg="sudo apt-get upgrade"
+alias aptpur="sudo apt-get purge"
+alias aptaut="sudo apt-get autoremove"
+alias aptins="sudo apt-get install"
+alias aptrem="sudo apt-get remove"
 
 animations() {
   gsettings set org.gnome.desktop.interface enable-animations $1
