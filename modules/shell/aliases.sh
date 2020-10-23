@@ -39,3 +39,20 @@ alias choose_java_version="sudo update-alternatives --config java"
 alias partition_id="sudo blkid $1"
 
 alias groups_edit="sudo vigr"
+
+#Functions
+
+# qgit-search-commit-such-that 'master' '[ "$(cat kafka-consumer/version.txt)" == "1.1.70" ] && echo true '
+function git-search-commit-such-that() {
+  local branch="$1"
+  local expr="$2"
+  local max_commits="${3:-50}"
+  for commit in $(git rev-list "$branch" | head -$max_commits)
+  do
+	  git checkout "$commit" &> /dev/null
+	  if [ "$(eval "$expr")" == "true" ]
+	  then
+	    git show -s --format='%H %s' "$commit"
+	  fi
+  done
+}
