@@ -23,6 +23,11 @@ restore_common_aliases() {
   #source ~/.bashrc
 }
 
+restore_common_dotfiles() {
+  echo "Restoring .gitconfig"
+  restore_dot $CWD/common/.gitconfig ~/.gitconfig
+}
+
 restore_dot() {
   echo "Restoring $2"
   make_symlink $1 $2
@@ -34,6 +39,7 @@ restore() {
   OS=$1
 
   restore_common_aliases
+  restore_common_dotfiles
 
   if [ "$OS" == "Ubuntu" ]
   then
