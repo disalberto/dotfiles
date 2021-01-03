@@ -1,0 +1,11 @@
+[user]
+	name = Alberto DI SAVIA PUGLISI
+
+	#Update the following with real email address
+	email = alberto.disaviapuglisi@provider.com 
+[core]
+	autocrlf = input
+[diff]
+	tool = diffuse
+[merge]
+	tool = diffuse
