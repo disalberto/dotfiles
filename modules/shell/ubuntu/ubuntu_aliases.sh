@@ -6,6 +6,7 @@ alias aptpur="sudo apt-get purge"
 alias aptaut="sudo apt-get autoremove"
 alias aptins="sudo apt-get install"
 alias aptrem="sudo apt-get remove"
+alias aptkey="sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys"
 
 animations() {
   gsettings set org.gnome.desktop.interface enable-animations $1
