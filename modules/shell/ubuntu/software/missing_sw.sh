@@ -51,6 +51,32 @@ install_deb() {
 
 }
 
+
+install_pyenv() {
+
+  #check installation
+  if [ -z "$(which pyenv)" ]
+  then
+    # install dependencies
+    sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev
+
+    #clone the repo
+    git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+
+    echo '' >> ~/.bashrc
+    echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+    echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+    echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n eval "$(pyenv init -)"\nfi' >> ~/.bashrc
+
+    # restart shell
+    exec "$SHELL"
+
+    echo "Installed $(pyenv -v)"
+  else
+    echo "Pyenv already installed : $(pyenv -v)"
+  fi
+}
+
 snap_install() {
   sudo snap instal "$1" --classic
 }
@@ -73,4 +99,5 @@ install_intellij_ultimate(){
 install_sublime
 install_chrome
 install_qsql
+install_pyenv
 #install_intellij_ultimate
