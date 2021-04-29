@@ -68,13 +68,35 @@ install_pyenv() {
     echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
     echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n eval "$(pyenv init -)"\nfi' >> ~/.bashrc
 
-    # restart shell
-    exec "$SHELL"
-
     echo "Installed $(pyenv -v)"
+
+    reset_shell="y"
   else
     echo "Pyenv already installed : $(pyenv -v)"
   fi
+
+
+  venv_v="$(pyenv virtualenv --version)"
+  [[ "$venv_v" =~ pyenv-virtualenv\ ([0-9]+\.[0-9]+\.[0-9]+) ]] && version="${BASH_REMATCH[1]}"
+
+  if [ -z "$version" ]
+  then
+    # clone repo
+    git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
+    echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
+
+    echo "Installed pyenv-virtualenv $(pyenv virtualenv --version)"
+    reset_shell="y"
+  else
+    echo "Pyenv-virtualenv already installed: $(pyenv virtualenv --version)"
+  fi
+
+  if [ "$reset_shell" == "y" ]
+  then
+    # restart shell
+    exec "$SHELL"
+  fi
+
 }
 
 snap_install() {
