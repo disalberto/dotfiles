@@ -14,6 +14,7 @@ alias gbd="git branch -D $1"
 alias gc="git checkout $1"
 alias gcb="git checkout -b $1"
 alias gs="git status"
+alias gcbt="git checkout --track $1" # upstream/feature/featurebranch
 alias gd="git diff"
 alias gcm="git commit -m $1"
 alias gca="git commit --amend --no-edit"
