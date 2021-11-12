@@ -2,6 +2,7 @@
 
 alias aptupd="sudo apt-get update"
 alias aptupg="sudo apt-get upgrade"
+alias aptupgk="sudo apt-get --with-new-pkgs upgrade"
 alias aptpur="sudo apt-get purge"
 alias aptaut="sudo apt-get autoremove"
 alias aptins="sudo apt-get install"
