@@ -19,7 +19,7 @@ make_symlink() {
 
 restore_common_aliases() {
   echo "Restoring aliases"
-  echo -e "\nCustom aliases...\nsource $CWD/aliases.sh" >> ~/.bashrc
+  echo -e "\n#Custom aliases...\nsource $CWD/aliases.sh" >> ~/.bashrc
   #source ~/.bashrc
 }
 
