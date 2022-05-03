@@ -29,6 +29,9 @@ alias guc="git reset --soft HEAD~1"
 alias xamppstart="sudo /opt/lampp/lampp start"
 alias xamppstop="sudo /opt/lampp/lampp stop"
 
+#AZURE
+alias azsb="az account set --subscription"
+
 #ORPHANS
 alias svim="sudo vim"
 alias ll="ls -lath"
