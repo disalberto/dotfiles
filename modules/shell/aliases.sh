@@ -24,6 +24,7 @@ alias gpo="git push origin $1"
 alias gpf="git push -f origin $1"
 alias gpm="git push origin master"
 alias guc="git reset --soft HEAD~1"
+alias grv="git remote -v"
 
 #XAMPP
 alias xamppstart="sudo /opt/lampp/lampp start"
