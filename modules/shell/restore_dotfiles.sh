@@ -47,10 +47,18 @@ restore() {
   elif [ "$OS" == "archlinux" ]
   then
     restore_arch
+  elif [ "$OS" == "Debian" ] #RaspberryOS
+  then
+    restore_debian
   else
     echo "Unsupported OS";
   fi
 
+}
+
+restore_debian() {
+  # only aliases for the moment
+  echo "Nothing to restore for the moment on this Debian distro. :)"
 }
 
 restore_ubuntu() {
